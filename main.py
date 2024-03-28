@@ -36,9 +36,9 @@ while url:
         count = int(re.sub('\D', '', book_soup.find("p", class_="instock availability").text.strip()))
 
         data.append({
-                "Название": name,
-                "Цена, £": price,
-                "Количество в наличии": count
+                "Name": name,
+                "Price, £": price,
+                "Count": count
             })
     next_button = soup.find('a', string='next')
     if next_button:
